@@ -1,0 +1,20 @@
+{
+  "name": "lfg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "tsc && node ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "dotenv": "^10.0.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "@types/node": "^15.6.1"
+  }
+}
