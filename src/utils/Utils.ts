@@ -25,6 +25,10 @@ export function callerDirectory(depth?: number): string {
     return file.substring(0, file.lastIndexOf("\\") + 1);
 }
 
+export function merge<A extends JsonObject<unknown>, B extends JsonObject<unknown>>(odin: A, dva: B): { [P in keyof A & keyof B]: A[P] & B[P] } {
+    return { ...odin, ...dva };
+}
+
 export type PartialExcept<T, K extends keyof T> = Partial<Omit<Information, K>> & Pick<Information, K>
 export type JsonObject<J> = { [key: string]: J, [key: number]: J };
 export type DefaultImport<T> = { 'default': T }
